@@ -56,17 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize starfield
   function initStarfield() {
-    starfield = [];
-    for (let i = 0; i < SETTINGS.starCount; i++) {
-      starfield.push({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        size: 0.5 + Math.random() * 4.5, // Smaller size for hearts
-        opacity: 0.2 + Math.random() * 0.8,
-        speed: 0.1 + Math.random() * 0.3,
-      });
-    }
+  starfield = [];
+  const heartCount = 20; // Change this number to control quantity
+
+  for (let i = 0; i < heartCount; i++) {
+    starfield.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      size: 0.5 + Math.random() * 8.5, // Smaller size for hearts
+      opacity: 0.2 + Math.random() * 0.8,
+      speed: 0.1 + Math.random() * 0.3,
+    });
   }
+}
+
 
   function resize() {
     DPR = Math.max(1, window.devicePixelRatio || 1);
