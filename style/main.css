@@ -733,7 +733,7 @@ body {
 
 .nine p strong{
   background-color: var(--primary-color);
-  color: black;
+  color: var(--light-color);
 }
 
 
