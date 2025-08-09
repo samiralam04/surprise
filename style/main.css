@@ -43,7 +43,7 @@ body {
 .one {
   font-size: 4.3rem;
   position: relative;
-  color: whitesmoke
+ 
 }
 
 .heart-beat {
@@ -368,7 +368,7 @@ body {
   font-weight: lighter;
   margin: 10px 0 0;
   word-spacing: 5px;
-  color: whitesmoke;
+  
 }
 
 #smile {
@@ -381,7 +381,7 @@ body {
 .nine p {
   font-size: 2rem;
   font-weight: lighter;
-  color:whitesmoke;
+  
 }
 
 #replay {
@@ -735,17 +735,9 @@ body {
   background-color: var(--primary-color);
   color: black;
 }
-#wishText{
 
-color: whitesmoke;
-}
 
-.idea-1,
-.idea-2,
-.idea-3,
-.idea-4{
-  color: whitesmoke;
-}
+
 /* new */
 .idea-7,
 .idea-8,
@@ -756,7 +748,7 @@ color: whitesmoke;
   left: 0;
   position: absolute;
   right: 0;
-  color: whitesmoke;
+  
 }
 
 .idea-7 strong,
@@ -768,7 +760,7 @@ color: whitesmoke;
   display: inline-block;
   padding: 3px 5px;
   background-color: var(--primary-color);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   transition: all 0.3s ease;
 }
 

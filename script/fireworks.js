@@ -55,15 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initialize starfield
-  function initStarfield() {
+function initStarfield() {
   starfield = [];
-  const heartCount = 20; // Change this number to control quantity
+  const heartCount = 30; // Change this number to control quantity
 
   for (let i = 0; i < heartCount; i++) {
     starfield.push({
       x: Math.random() * W,
       y: Math.random() * H,
-      size: 0.5 + Math.random() * 8.5, // Smaller size for hearts
+      size: 4.5 + Math.random() * 4.5, // Smaller size for hearts
       opacity: 0.2 + Math.random() * 0.8,
       speed: 0.1 + Math.random() * 0.3,
     });
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Draw trail
       if (this.trail.length > 1) {
         ctx.beginPath();
-        ctx.moveTo(this.trail[0].x, this.trail[0].y);
+        ctx.moveTo(this.trail[0].x, this.y + (this.trail[0].y - this.y) * 2);
         for (let i = 1; i < this.trail.length; i++) {
           ctx.lineTo(this.trail[i].x, this.trail[i].y);
         }
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     createSpecialEffect() {
-      const effectType = Math.floor(Math.random() * 3);
+      const effectType = Math.floor(Math.random() * 4);
 
       switch (effectType) {
         case 0: // Heart shape
@@ -487,8 +487,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loopId = requestAnimationFrame(loop);
 
-    // Clear with subtle fade for trails
-    ctx.fillStyle = "rgba(5, 5, 15, 0.2)";
+    // Clear with solid white background
+    ctx.fillStyle = "white";
     ctx.fillRect(0, 0, W, H);
 
     // Draw starfield
