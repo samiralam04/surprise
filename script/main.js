@@ -9,7 +9,6 @@ window.addEventListener("DOMContentLoaded", () => {
   createSparkles();
 });
 
-
 function createFloatingHearts() {
   const container = document.querySelector(".floating-hearts");
   const heartCount = 20;
@@ -170,7 +169,7 @@ const animationTimeline = () => {
     .map((part) =>
       part === "<br>"
         ? "<br>"
-        : `<span>${part.split("").join("</span><span>")}</span>`
+        : `<span>${part.split("").join("</span><span>")}</span>`,
     )
     .join("");
 
@@ -212,7 +211,7 @@ const animationTimeline = () => {
         y: 10,
         ease: "power4.in",
       },
-      "+=3.5"
+      "+=3.5",
     )
     .to(
       ".two",
@@ -222,7 +221,7 @@ const animationTimeline = () => {
         y: 10,
         ease: "power4.in",
       },
-      "-=1"
+      "-=1",
     )
     .from(".three", 0.7, {
       opacity: 0,
@@ -237,7 +236,7 @@ const animationTimeline = () => {
         y: 10,
         ease: "power4.in",
       },
-      "+=3"
+      "+=3",
     )
     .from(".four", 0.7, {
       scale: 0.2,
@@ -256,7 +255,7 @@ const animationTimeline = () => {
         visibility: "visible",
         ease: "back.out",
       },
-      0.05
+      0.05,
     )
     .to(
       ".fake-btn",
@@ -264,7 +263,7 @@ const animationTimeline = () => {
       {
         backgroundColor: "rgb(255, 105, 180)",
       },
-      "+=4"
+      "+=4",
     )
     .to(
       ".four",
@@ -275,7 +274,7 @@ const animationTimeline = () => {
         y: -150,
         ease: "back.in",
       },
-      "+=1"
+      "+=1",
     )
     .from(".idea-1", 0.7, {
       ...ideaTextTrans,
@@ -288,7 +287,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=2.5"
+      "+=2.5",
     )
     .from(".idea-2", 0.7, {
       ...ideaTextTrans,
@@ -301,7 +300,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=2.5"
+      "+=2.5",
     )
     .from(".idea-3", 0.7, {
       ...ideaTextTrans,
@@ -321,7 +320,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=5"
+      "+=5",
     )
     // new
     .from(".idea-7", 3, {
@@ -335,7 +334,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=5"
+      "+=5",
     )
     .from(".idea-8", 3, {
       ...ideaTextTrans,
@@ -348,7 +347,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=5"
+      "+=5",
     )
     .from(".idea-9", 3, {
       ...ideaTextTrans,
@@ -361,7 +360,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=5"
+      "+=5",
     )
     .from(".idea-10", 3, {
       ...ideaTextTrans,
@@ -374,7 +373,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=5"
+      "+=5",
     )
     .from(".idea-11", 3, {
       ...ideaTextTrans,
@@ -387,7 +386,20 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=5"
+      "+=5",
+    )
+    .from(".idea-12", 3, {
+      ...ideaTextTrans,
+      ease: "back.out(1.7)",
+    })
+    .to(
+      ".idea-12",
+      3,
+      {
+        ...ideaTextTransLeave,
+        ease: "back.in",
+      },
+      "+=5",
     )
     //new end
 
@@ -400,7 +412,7 @@ const animationTimeline = () => {
         rotation: 15,
         ease: "elastic.out(1, 0.5)",
       },
-      0.2
+      0.2,
     )
     .staggerTo(
       ".idea-6 span",
@@ -412,7 +424,7 @@ const animationTimeline = () => {
         ease: "elastic.in(1, 0.5)",
       },
       0.2,
-      "+=1.5"
+      "+=1.5",
     )
 
     .from(".idea-4", 0.7, {
@@ -426,7 +438,7 @@ const animationTimeline = () => {
         ...ideaTextTransLeave,
         ease: "back.in",
       },
-      "+=2.5"
+      "+=2.5",
     )
     .from(
       ".idea-5",
@@ -440,7 +452,7 @@ const animationTimeline = () => {
         opacity: 0,
         ease: "back.out(1.7)",
       },
-      "+=1.5"
+      "+=1.5",
     )
     .to(
       ".idea-5 span",
@@ -450,7 +462,7 @@ const animationTimeline = () => {
         x: 8,
         ease: "elastic.out(1, 0.5)",
       },
-      "+=1.4"
+      "+=1.4",
     )
     .to(
       ".idea-5",
@@ -460,7 +472,7 @@ const animationTimeline = () => {
         opacity: 0,
         ease: "back.in",
       },
-      "+=2"
+      "+=2",
     )
 
     .staggerFromTo(
@@ -475,7 +487,7 @@ const animationTimeline = () => {
         y: -1000,
         ease: "power1.out",
       },
-      0.2
+      0.2,
     )
     .from(
       ".photo-frame",
@@ -488,7 +500,7 @@ const animationTimeline = () => {
         rotationZ: -45,
         ease: "back.out(1.7)",
       },
-      "-=2"
+      "-=2",
     )
     .from(".hat", 0.5, {
       x: -100,
@@ -507,7 +519,7 @@ const animationTimeline = () => {
         skewX: "30deg",
         ease: "elastic.out(1, 0.5)",
       },
-      0.1
+      0.1,
     )
     .staggerFromTo(
       ".wish-hbd span",
@@ -523,7 +535,7 @@ const animationTimeline = () => {
         ease: "expo.out",
       },
       0.1,
-      "party"
+      "party",
     )
     .from(
       ".wish h5",
@@ -534,7 +546,7 @@ const animationTimeline = () => {
         skewX: "-15deg",
         ease: "back.out(1.7)",
       },
-      "party"
+      "party",
     )
     .staggerTo(
       ".eight svg",
@@ -547,7 +559,7 @@ const animationTimeline = () => {
         repeatDelay: 1.4,
         ease: "power2.out",
       },
-      0.3
+      0.3,
     )
     .to(".six", 0.5, {
       opacity: 0,
@@ -562,7 +574,7 @@ const animationTimeline = () => {
         ...ideaTextTrans,
         ease: "back.out(1.7)",
       },
-      1.2
+      1.2,
     )
     .from(
       ".kiss",
@@ -572,7 +584,7 @@ const animationTimeline = () => {
         opacity: 0,
         ease: "back.out(1.7)",
       },
-      "-=0.5"
+      "-=0.5",
     )
     .to(
       ".last-smile",
@@ -581,7 +593,7 @@ const animationTimeline = () => {
         rotation: 90,
         ease: "back.out(1.7)",
       },
-      "+=1"
+      "+=1",
     );
 
   // Restart Animation on click

@@ -43,7 +43,6 @@ body {
 .one {
   font-size: 4.3rem;
   position: relative;
- 
 }
 
 .heart-beat {
@@ -209,7 +208,7 @@ body {
 
 .baloons img {
   position: absolute;
-  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
 }
 
 /* Left side balloons */
@@ -238,7 +237,6 @@ body {
 .baloons img:nth-child(n) {
   top: calc(5% * var(--offset, 0));
 }
-
 
 .seven,
 .eight {
@@ -329,7 +327,9 @@ body {
   font-family: "Dancing Script", cursive;
   font-size: 2.2rem;
   color: #ff69b4;
-  text-shadow: 2px 2px 8px #fff0f6, 0 0 10px #ffb6c1;
+  text-shadow:
+    2px 2px 8px #fff0f6,
+    0 0 10px #ffb6c1;
   background: transparent;
   padding: 18px 32px;
   margin: 24px auto;
@@ -368,7 +368,35 @@ body {
   font-weight: lighter;
   margin: 10px 0 0;
   word-spacing: 5px;
-  
+}
+
+.final-message {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.45rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #d63384;
+  margin: 22px auto 0;
+  line-height: 1.8;
+  max-width: 480px;
+  text-align: center;
+  text-shadow:
+    0 0 10px #ffb6c1,
+    0 0 20px rgba(255, 105, 180, 0.3);
+  border-top: 1px dashed rgba(255, 105, 180, 0.4);
+  padding-top: 16px;
+  animation: finalMessageFadeIn 1.5s ease 0.8s both;
+}
+
+@keyframes finalMessageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #smile {
@@ -381,7 +409,6 @@ body {
 .nine p {
   font-size: 2rem;
   font-weight: lighter;
-  
 }
 
 #replay {
@@ -389,7 +416,9 @@ body {
   color: var(--primary-color);
   text-decoration: underline;
   cursor: pointer;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
   margin-top: 20px;
   display: inline-block;
 }
@@ -663,7 +692,9 @@ body {
 /* Soft glowing effect for romantic mood */
 .idea-6 span,
 .wish-hbd {
-  text-shadow: 0 0 20px var(--secondary-color), 0 0 40px var(--primary-color);
+  text-shadow:
+    0 0 20px var(--secondary-color),
+    0 0 40px var(--primary-color);
 }
 
 /* Media Queries */
@@ -731,30 +762,29 @@ body {
   }
 }
 
-.nine p strong{
+.nine p strong {
   background-color: var(--primary-color);
   color: var(--light-color);
 }
-
-
 
 /* new */
 .idea-7,
 .idea-8,
 .idea-9,
 .idea-10,
+.idea-12,
 .idea-11 {
   font-size: 2rem;
   left: 0;
   position: absolute;
   right: 0;
-  
 }
 
 .idea-7 strong,
 .idea-8 strong,
 .idea-9 strong,
 .idea-10 strong,
+.idea-12 strong,
 .idea-11 strong {
   border-radius: 3px;
   display: inline-block;
@@ -777,7 +807,6 @@ body {
   margin-left: 10px;
 }
 
-
 /* FIREWORKS: keep it non-interactive and behind page content */
 #fireworks {
   position: fixed;
@@ -795,8 +824,11 @@ body {
 
 /* New styles for special effects */
 @keyframes twinkle {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
 }
-
-
