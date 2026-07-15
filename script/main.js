@@ -401,6 +401,19 @@ const animationTimeline = () => {
       },
       "+=5",
     )
+    .from(".idea-13", 3, {
+      ...ideaTextTrans,
+      ease: "back.out(1.7)",
+    })
+    .to(
+      ".idea-13",
+      3,
+      {
+        ...ideaTextTransLeave,
+        ease: "back.in",
+      },
+      "+=5",
+    )
     //new end
 
     .staggerFrom(

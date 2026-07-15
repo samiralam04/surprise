@@ -773,6 +773,7 @@ body {
 .idea-9,
 .idea-10,
 .idea-12,
+.idea-13,
 .idea-11 {
   font-size: 2rem;
   left: 0;
@@ -785,6 +786,7 @@ body {
 .idea-9 strong,
 .idea-10 strong,
 .idea-12 strong,
+.idea-13 strong,
 .idea-11 strong {
   border-radius: 3px;
   display: inline-block;
