@@ -1,15 +1,16 @@
 :root {
-  --primary-color: #ff69b4;
-  --secondary-color: #ffb6c1;
-  --accent-color: #ff1493;
-  --text-color: #333;
-  --light-color: #fff;
-  --shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+  --primary-color: #820ad1;     /* Vibrant Purple */
+  --secondary-color: #c88af7;   /* Lavender/Pastel Purple */
+  --accent-color: #00d2c4;      /* Bright Teal */
+  --highlight-color: #ffb703;   /* Bright Birthday Gold */
+  --text-color: #2b2d42;        /* Dark Slate */
+  --light-color: #ffffff;
+  --shadow: 0 4px 15px rgba(130, 10, 209, 0.25);
 }
 
 html {
   box-sizing: border-box;
-  background: linear-gradient(135deg, #fff5f5 0%, #ffecef 100%);
+  background: linear-gradient(135deg, #f8f4ff 0%, #f1e9ff 100%);
 }
 
 body {
@@ -45,13 +46,13 @@ body {
   position: relative;
 }
 
-.heart-beat {
+.birthday-pop {
   position: absolute;
   top: -15px;
   right: -15px;
-  color: var(--primary-color);
+  color: var(--highlight-color);
   font-size: 1.5rem;
-  animation: heartbeat 1.5s infinite;
+  animation: birthdayPop 1.5s infinite;
 }
 
 .two {
@@ -326,10 +327,10 @@ body {
 .wish-hbd {
   font-family: "Dancing Script", cursive;
   font-size: 2.2rem;
-  color: #ff69b4;
+  color: var(--primary-color);
   text-shadow:
     2px 2px 8px #fff0f6,
-    0 0 10px #ffb6c1;
+    0 0 10px var(--secondary-color);
   background: transparent;
   padding: 18px 32px;
   margin: 24px auto;
@@ -464,8 +465,8 @@ body {
   animation: sparkle 2s ease-out infinite;
 }
 
-/* Floating hearts background */
-.floating-hearts {
+/* Floating items background */
+.floating-birthday-items {
   position: fixed;
   top: 0;
   left: 0;
@@ -475,46 +476,45 @@ body {
   z-index: -1;
 }
 
-.floating-heart {
+.floating-item {
   position: absolute;
   font-size: 20px;
-  color: var(--primary-color);
   opacity: 0.6;
-  animation: floatHeart 15s linear infinite;
+  animation: floatItem 15s linear infinite;
 }
 
-/* heartfly animation */
-.heartfly-animation {
+/* giftfly animation */
+.giftfly-animation {
   position: relative;
   height: 100px;
   margin-top: 30px;
 }
 
-.heartfly {
+.giftfly {
   position: absolute;
   font-size: 3rem;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  animation: heartflyFly 3s ease-in-out infinite;
+  animation: giftflyFly 3s ease-in-out infinite;
 }
 
 /* Keyframe animations */
-@keyframes heartbeat {
+@keyframes birthdayPop {
   0% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
   25% {
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(10deg);
   }
   50% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
   75% {
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(-10deg);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
 }
 
@@ -557,9 +557,9 @@ body {
   }
 }
 
-@keyframes floatHeart {
+@keyframes floatItem {
   0% {
-    transform: translateY(100vh) scale(0.5);
+    transform: translateY(100vh) scale(0.5) rotate(0deg);
     opacity: 0;
   }
   10% {
@@ -569,47 +569,47 @@ body {
     opacity: 0.6;
   }
   100% {
-    transform: translateY(-100px) scale(1.2);
+    transform: translateY(-100px) scale(1.2) rotate(360deg);
     opacity: 0;
   }
 }
 
-@keyframes heartflyFly {
+@keyframes giftflyFly {
   0% {
-    transform: translateX(-50%) translateY(0) scale(0.5);
+    transform: translateX(-50%) translateY(0) scale(0.5) rotate(0deg);
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
   50% {
-    transform: translateX(-50%) translateY(-50px) scale(1);
+    transform: translateX(-50%) translateY(-50px) scale(1) rotate(15deg);
   }
   80% {
     opacity: 1;
   }
   100% {
-    transform: translateX(-50%) translateY(-100px) scale(1.5);
+    transform: translateX(-50%) translateY(-100px) scale(1.5) rotate(-15deg);
     opacity: 0;
   }
 }
 
-/* Romantic Heart Animation */
-@keyframes floatHearts {
+/* Festive Birthday Decoration Animation */
+@keyframes floatDecorations {
   0% {
-    transform: translateY(100vh) scale(0.8) rotate(-10deg);
+    transform: translateY(100vh) scale(0.8) rotate(-15deg);
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    transform: translateY(-10vh) scale(1.2) rotate(10deg);
+    transform: translateY(-10vh) scale(1.3) rotate(15deg);
     opacity: 0;
   }
 }
 
-.hearts {
+.decorations {
   position: fixed;
   left: 0;
   top: 0;
@@ -619,39 +619,35 @@ body {
   z-index: 10;
 }
 
-.heart {
+.decoration {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  background: url("https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2764.svg")
-    no-repeat center/contain;
-  opacity: 0.7;
-  animation: floatHearts 6s linear infinite;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  animation: floatDecorations 6s linear infinite;
 }
 
-.heart:nth-child(1) {
+.decoration:nth-child(1) {
   left: 10vw;
   animation-delay: 0s;
 }
-.heart:nth-child(2) {
+.decoration:nth-child(2) {
   left: 30vw;
   animation-delay: 1s;
 }
-.heart:nth-child(3) {
+.decoration:nth-child(3) {
   left: 50vw;
   animation-delay: 2s;
 }
-.heart:nth-child(4) {
+.decoration:nth-child(4) {
   left: 70vw;
   animation-delay: 3s;
 }
-.heart:nth-child(5) {
+.decoration:nth-child(5) {
   left: 85vw;
   animation-delay: 4s;
 }
 
-/* Fade-in animation for main sections */
-@keyframes fadeInRomantic {
+@keyframes fadeInFestive {
   from {
     opacity: 0;
     transform: scale(0.95);
@@ -665,7 +661,7 @@ body {
 .six,
 .wish-hbd,
 .idea-6 span {
-  animation: fadeInRomantic 2s ease;
+  animation: fadeInFestive 2s ease;
 }
 
 /* Responsive balloons */
@@ -683,9 +679,8 @@ body {
 
 /* Responsive hearts */
 @media screen and (max-width: 500px) {
-  .heart {
-    width: 24px;
-    height: 24px;
+  .decoration {
+    font-size: 1.5rem;
   }
 }
 

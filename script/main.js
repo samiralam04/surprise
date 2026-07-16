@@ -2,30 +2,31 @@ window.addEventListener("DOMContentLoaded", () => {
   // First show the music prompt
   showMusicPrompt();
 
-  // Create floating hearts background
-  createFloatingHearts();
+  // Create floating items background
+  createFloatingBirthdayItems();
 
   // Create sparkles
   createSparkles();
 });
 
-function createFloatingHearts() {
-  const container = document.querySelector(".floating-hearts");
-  const heartCount = 20;
+function createFloatingBirthdayItems() {
+  const container = document.querySelector(".floating-birthday-items");
+  const itemCount = 25;
+  const emojis = ["🎈", "🎁", "🎉", "🍰", "⭐", "🎂", "🧁", "🥳", "🍬", "🍭"];
 
-  for (let i = 0; i < heartCount; i++) {
-    const heart = document.createElement("div");
-    heart.classList.add("floating-heart");
-    heart.innerHTML = "❤";
+  for (let i = 0; i < itemCount; i++) {
+    const item = document.createElement("div");
+    item.classList.add("floating-item");
+    item.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
 
     // Random position and size
-    const size = Math.random() * 20 + 10;
-    heart.style.fontSize = `${size}px`;
-    heart.style.left = `${Math.random() * 100}%`;
-    heart.style.animationDuration = `${10 + Math.random() * 20}s`;
-    heart.style.animationDelay = `${Math.random() * 5}s`;
+    const size = Math.random() * 20 + 15;
+    item.style.fontSize = `${size}px`;
+    item.style.left = `${Math.random() * 100}%`;
+    item.style.animationDuration = `${10 + Math.random() * 20}s`;
+    item.style.animationDelay = `${Math.random() * 5}s`;
 
-    container.appendChild(heart);
+    container.appendChild(item);
   }
 }
 
@@ -60,16 +61,13 @@ function showMusicPrompt() {
     text: "Do you want to play music with this birthday surprise?",
     icon: "question",
     showCancelButton: true,
-    confirmButtonColor: "#ff69b4",
+    confirmButtonColor: "#820ad1",
     cancelButtonColor: "#d33",
     confirmButtonText: "Yes, please!",
     cancelButtonText: "No thanks",
     background: "#fff",
     backdrop: `
-            rgba(255,182,193,0.4)
-            url("img/heart.gif")
-            center top
-            no-repeat
+            rgba(130, 10, 209, 0.2)
         `,
     allowOutsideClick: false,
   }).then((result) => {
@@ -128,25 +126,25 @@ function showMusicButton() {
   playButton.style.left = "50%";
   playButton.style.transform = "translateX(-50%)";
   playButton.style.padding = "12px 24px";
-  playButton.style.backgroundColor = "#ff69b4";
+  playButton.style.backgroundColor = "var(--primary-color)";
   playButton.style.color = "white";
   playButton.style.border = "none";
   playButton.style.borderRadius = "30px";
   playButton.style.fontFamily = '"Poppins", sans-serif';
   playButton.style.cursor = "pointer";
   playButton.style.zIndex = "1000";
-  playButton.style.boxShadow = "0 4px 15px rgba(255, 105, 180, 0.4)";
+  playButton.style.boxShadow = "var(--shadow)";
   playButton.style.fontWeight = "600";
   playButton.style.transition = "all 0.3s ease";
 
   playButton.addEventListener("mouseover", () => {
     playButton.style.transform = "translateX(-50%) scale(1.05)";
-    playButton.style.boxShadow = "0 6px 20px rgba(255, 105, 180, 0.6)";
+    playButton.style.boxShadow = "0 6px 20px rgba(130, 10, 209, 0.5)";
   });
 
   playButton.addEventListener("mouseout", () => {
     playButton.style.transform = "translateX(-50%)";
-    playButton.style.boxShadow = "0 4px 15px rgba(255, 105, 180, 0.4)";
+    playButton.style.boxShadow = "var(--shadow)";
   });
 
   document.body.appendChild(playButton);
@@ -261,7 +259,7 @@ const animationTimeline = () => {
       ".fake-btn",
       0.1,
       {
-        backgroundColor: "rgb(255, 105, 180)",
+        backgroundColor: "#820ad1",
       },
       "+=4",
     )
@@ -309,7 +307,7 @@ const animationTimeline = () => {
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
       x: 10,
-      backgroundColor: "rgb(255, 105, 180)",
+      backgroundColor: "#820ad1",
       color: "#fff",
       ease: "elastic.out(1, 0.5)",
     })
@@ -544,7 +542,7 @@ const animationTimeline = () => {
       {
         scale: 1,
         rotationY: 0,
-        color: "#ff69b4",
+        color: "#820ad1",
         ease: "expo.out",
       },
       0.1,
