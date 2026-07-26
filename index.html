@@ -1,294 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="A heartfelt romantic birthday surprise made with love ❤️" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <title>Happy Birthday, My Love 💕</title>
+    <title>Happy Birthday!!! :)</title>
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Dancing+Script:wght@700&family=Great+Vibes&family=Outfit:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Sweetalert -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
     <!-- My Style -->
     <link rel="stylesheet" href="./style/main.css" />
-</head>
+  </head>
 
-<body>
-
+  <body>
     <canvas id="fireworks" aria-hidden="true" role="presentation"></canvas>
 
-    <!-- Ambient particles -->
     <div class="sparkles"></div>
     <div class="floating-hearts"></div>
     <div class="rose-petals"></div>
 
-    <!-- Stars background -->
-    <div class="stars" id="stars"></div>
+    <!-- Floating Audio Control Bar -->
+    <div class="romantic-music-bar" id="musicBar">
+      <button class="music-disc-btn" id="musicToggle" aria-label="Toggle Music">
+        <i class="fas fa-heart-pulse disc-icon"></i>
+      </button>
+      <button class="music-mute-btn" id="muteToggle" aria-label="Mute Audio">
+        <i class="fas fa-volume-high" id="muteIcon"></i>
+      </button>
+    </div>
+
+    <!-- Floating Love Letter Button -->
+    <button
+      class="love-letter-floating-btn"
+      id="openLetterBtn"
+      aria-label="Open Love Letter"
+    >
+      <i class="fas fa-envelope-open-text"></i>
+      <span>Read Love Note 💌</span>
+    </button>
+
+    <!-- Love Letter Modal -->
+    <div class="romantic-modal-overlay" id="letterModalOverlay">
+      <div class="romantic-modal-card">
+        <button class="modal-close-btn" id="closeLetterBtn">&times;</button>
+        <div class="wax-seal">❤️</div>
+        <h2 class="letter-title">My Dearest Heroine... 💕</h2>
+        <div class="letter-body">
+          <p>
+            From the moment you came into my life, every single day feels
+            brighter, warmer, and sweeter.
+          </p>
+          <p>
+            Whether I'm spectating your Free Fire gameplay just to feel close to
+            you, or giving you in-game coins when you demand them like a boss, I
+            cherish every single side of you 🎮👑💕
+          </p>
+          <p>
+            You threaten me daily with <em>"pitega tu"</em> (which I secretly
+            love 😜), and you'll always be my favorite notification forever.
+          </p>
+          <p>
+            On your special day, I wish you endless Booyah victories, all the
+            chocolates you desire, and every bit of happiness in the world!
+          </p>
+          <p class="letter-signature">Forever & Always yours, ❤️</p>
+        </div>
+      </div>
+    </div>
 
     <audio class="song" loop autoplay>
-        <source src="./music/hbd.mpeg"></source>
-        Your browser isn't invited for super fun audio time.
+      <source src="./music/hbd.mpeg" />
+      Your browser isn't invited for super fun audio time.
     </audio>
 
     <div class="container">
+      <div class="one">
+        <h1 class="one">
+          Oii <br />
+          <span id="name">Heroine</span>
+          <div class="heart-beat"><i class="fas fa-heart"></i></div>
+        </h1>
+        <p class="two" id="greetingText">
+          your full name is too long btw! 😆😂
+        </p>
+      </div>
 
-        <!-- SLIDE 1: Opening -->
-        <div class="one">
-            <h1 class="one">
-                Hey,<br>
-                <span id="name" class="name-glow">My Love</span>
-                <div class="heart-beat"><i class="fas fa-heart"></i></div>
-            </h1>
-            <p class="two" id="greetingText">you make every ordinary day feel like a fairytale ✨</p>
+      <div class="three">
+        <p>Guess what It's your birthday!! 🎂</p>
+      </div>
+
+      <div class="four">
+        <div class="text-box" style="position: relative">
+          <p class="hbd-chatbox">
+            I was just going to send a regular text..! 😆😂
+          </p>
+          <button class="send-btn">send ➤</button>
+        </div>
+      </div>
+
+      <div class="five">
+        <p class="idea-1">That's what a normal person would do 😆</p>
+        <p class="idea-2">
+          But then I stopped. Because you deserve something Special na.. 😝
+        </p>
+        <p class="idea-3">
+          Because you are...<br />
+          <strong>special🙂‍↔️</strong>
+          .
+        </p>
+        <p class="idea-4">that's why🤗</p>
+        <p class="idea-5">
+          i am giving you this entire website
+          <span id="smile">:)</span>
+        </p>
+        <p class="idea-6">
+          <span>S</span>
+          <span>O</span>
+        </p>
+
+        <!-- New personalized quotes section -->
+        <p class="idea-7">
+          I call you <strong>Heroine</strong>…<br />
+          because whenever you enter,<br />
+          background music automatically starts in my head 🎶✨
+        </p>
+
+        <p class="idea-8">
+          Scientists still can’t explain<br />
+          how someone this cute<br />
+          also threatens me daily with<br />
+          <strong>“pitega tu”</strong>
+          <span>😤</span>
+        </p>
+
+        <p class="idea-9">
+          I join your lobby... 🎮<br />
+          not because I love the game,<br />
+          but because I love being with you.<br />
+          <strong>You're my favourite part of every match.</strong> ❤️
+        </p>
+
+        <p class="idea-10">
+          Every time you ask me for tokens... 🪙<br />
+          I secretly smile.<br />
+          Because it reminds me that<br />
+          <strong>you always know exactly who to come to.</strong> ❤️🥹
+        </p>
+
+        <p class="idea-11">
+          You threaten me daily…<br />
+          yet somehow<br />
+          you’re still my <strong>favorite notification</strong> 📱✨
+        </p>
+
+        <p class="idea-12">
+          Maybe I can’t give you the world…<br />
+          but I promise,<br />
+          whenever you look back,<br />
+          you’ll always find someone<br />
+          quietly <strong>cheering</strong> for your happiness — me ❤️
+        </p>
+
+        <p class="idea-13">
+          May your year be filled with<br />
+          <strong>Booyah victories</strong> & less bugs,<br />
+          and <strong>more joy</strong> than my heart
+          <span>❤️</span>
+        </p>
+        <!-- new end -->
+      </div>
+
+      <div class="six">
+        <div class="photo-frame">
+          <div class="frame-decoration top-left"></div>
+          <div class="frame-decoration top-right"></div>
+          <div class="frame-decoration bottom-left"></div>
+          <div class="frame-decoration bottom-right"></div>
+          <img
+            src="./img/img.jpeg"
+            alt="profile"
+            class="profile-picture"
+            id="imagePath"
+          />
         </div>
 
-        <!-- SLIDE 2: Birthday reveal -->
-        <div class="three">
-            <p>Today is your birthday... 🎂</p>
-            <p class="three-sub">and my heart is overflowing 💖</p>
+        <div class="wish">
+          <h3 class="wish-hbd">
+            Happy Birthday to the girl<br />
+            who looks innocent<br />
+            but threatens me daily with<br />
+            “pitega tu”
+          </h3>
+          <h5 id="wishText">
+            Stay cute, stay dangerous,<br />
+            and keep being my favorite<br />
+            notification forever 📱✨
+          </h5>
         </div>
+      </div>
 
-        <!-- SLIDE 3: Chat bubble -->
-        <div class="four">
-            <div class="text-box" style="position: relative;">
-                <p class="hbd-chatbox">
-                    I was just going to send a regular text..! 🤡
-                </p>
-                <button class="send-btn" id="sendBtn">
-                    send ➤
-                </button>
+      <!-- Dedicated Interactive Cake & Candle Stage -->
+      <div class="six-cake">
+        <div class="candle-cake-container" id="cakeStage">
+          <div class="cake-box">
+            <div class="cake-plate"></div>
+            <div class="cake-layer bottom-layer"></div>
+            <div class="cake-layer top-layer"></div>
+            <div class="icing"></div>
+            <div class="candle" id="candle">
+              <div class="flame" id="flame" title="Tap to blow out!"></div>
             </div>
+          </div>
+          <p class="candle-hint" id="candleHint">
+            ✨ Tap the flame to blow out candle & make a wish! ✨
+          </p>
         </div>
+      </div>
 
-        <!-- SLIDE 4-6: Story paragraphs -->
-        <div class="five">
-            <p class="idea-1">But then my heart said no. 💓</p>
-            <p class="idea-2">Because you deserve more than just words on a screen…</p>
-            <p class="idea-3">
-                You deserve the whole universe.<br>
-                <strong>You're that special.🌌</strong>
-                .
-            </p>
-            <p class="idea-4">So here I am, building galaxies for you 🌠</p>
-            <p class="idea-5">
-                with this entire website
-                <span id="smile">💕</span>
-            </p>
-            <p class="idea-6">
-                <span>S</span>
-                <span>O</span>
-            </p>
-
-            <!-- ROMANTIC QUOTES — heart-touching lines -->
-            <p class="idea-7">
-                In a world full of people,<br>
-                my eyes would always<br>
-                find <strong>you first.</strong> 👀💗
-            </p>
-
-            <p class="idea-8">
-                I don't need the stars to feel<br>
-                magic at night —<br>
-                I have <strong>your smile</strong> for that. 🌙✨
-            </p>
-
-            <p class="idea-9">
-                You are not just my love story.<br>
-                You are the <strong>reason</strong><br>
-                I believe in love stories. 📖❤️
-            </p>
-
-            <p class="idea-10">
-                Every time you laugh,<br>
-                I fall in love with you<br>
-                <strong>all over again.</strong> <span>🍂💕</span>
-            </p>
-
-            <p class="idea-11">
-                You are my favorite<br>
-                <strong>safe place</strong> in this chaotic world.<br>
-                Home is wherever you are. 🏡🤍
-            </p>
-
-            <p class="idea-12">
-                I cannot promise you the moon…<br>
-                but I promise,<br>
-                to be your <strong>moon</strong> on your darkest nights. 🌕💜
-            </p>
-
-            <p class="idea-13">
-                And today, on your birthday —<br>
-                I just want you to know<br>
-                loving you is the best thing<br>
-                <strong>I have ever done.</strong> ❤️‍🔥
-            </p>
-
-            <!-- new end -->
+      <div class="seven">
+        <div class="baloons">
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
+          <img src="img/ballon.png" alt="" />
         </div>
+      </div>
 
-        <!-- SLIDE 7: Photo + Wish -->
-        <div class="six">
-            <div class="photo-frame">
-                <div class="frame-decoration top-left"></div>
-                <div class="frame-decoration top-right"></div>
-                <div class="frame-decoration bottom-left"></div>
-                <div class="frame-decoration bottom-right"></div>
-                <!-- Sparkle corners -->
-                <div class="corner-sparkle top-left-s">✦</div>
-                <div class="corner-sparkle top-right-s">✦</div>
-                <div class="corner-sparkle bottom-left-s">✦</div>
-                <div class="corner-sparkle bottom-right-s">✦</div>
-                <img src="./img/img.jpeg" alt="profile" class="profile-picture" id="imagePath" />
-            </div>
+      <div class="eight">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="20" />
+        </svg>
+      </div>
 
-            <div class="wish">
-                <h3 class="wish-hbd">
-                    Happy Birthday,<br>
-                    my most favourite<br>
-                    person in the world 🌸
-                </h3>
-                <h5 id="wishText">
-                    You are my sunshine on rainy days,<br>
-                    my calm in every storm,<br>
-                    and my reason to smile every morning. 🌷
-                </h5>
+      <div class="nine">
+        <p>
+          Typed way too many lines of code 🤓<br />
+          just to make you smile 🙂<br />
+          <strong><b>Was it worth it?</b></strong
+          ><br />
+          If this made you smile even a little…<br />
+          I think I deserve a
+          <strong><b>Booyah</b></strong> treat, right? 😋
+        </p>
 
-                <!-- Romantic final quote -->
-                <div class="final-message">
-                    "I loved her not for the way she danced with my angels,<br>
-                    but for the way the sound of her name could silence my demons."<br>
-                    <span class="quote-attr">— and that's you, always. 💞</span>
-                </div>
-            </div>
+        <p>
+          Now come back and tell me honestly…<br />
+          did you like it? ❤️
+        </p>
+        <p id="replay">
+          <span class="extra-bold">click here🫆,</span> to replay.
+        </p>
+
+        <div class="heartfly-animation">
+          <div class="heartfly">💗</div>
         </div>
+      </div>
 
-        <!-- Balloons -->
-        <div class="seven">
-            <div class="baloons">
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-                <img src="img/ballon.png" alt="" />
-            </div>
-        </div>
-
-        <div class="eight">
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
-        </div>
-
-        <!-- FINAL SLIDE -->
-        <div class="nine">
-            <p>
-                I wrote every line of this<br>
-                just to see you smile. 🌹<br>
-                <strong><b>And I'd do it a thousand times more.</b></strong><br>
-                <br>
-                Happy Birthday, my love —<br>
-                <strong><b>you are my everything. 💕</b></strong>
-            </p>
-
-            <p>
-                Now close your eyes for a second…<br>
-                and feel how much I love you. 🤍
-            </p>
-            <p id="replay"><span class="extra-bold">click here 🫆,</span> to replay.</p>
-
-            <div class="heartfly-animation">
-                <div class="heartfly">💗</div>
-            </div>
-        </div>
-
-        <!-- Floating hearts overlay -->
-        <div class="hearts">
-            <div class="heart"></div>
-            <div class="heart"></div>
-            <div class="heart"></div>
-            <div class="heart"></div>
-            <div class="heart"></div>
-        </div>
+      <div class="hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+      </div>
     </div>
-
-</body>
-<!-- Greensock -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<!-- Sweetalert -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script type="application/javascript" src="./script/fireworks.js"></script>
-<script type="application/javascript" src="./script/main.js"></script>
-
+  </body>
+  <!-- Greensock -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <!-- Sweetalert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="application/javascript" src="./script/fireworks.js"></script>
+  <script type="application/javascript" src="./script/main.js"></script>
 </html>
